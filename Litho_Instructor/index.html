@@ -86,7 +86,8 @@
 	  //open confirmation menu when user attempt to close browser 
 	  
 	  window.onbeforeunload = function(event){
-		event.returnValue = "ARE YOU SURE YOU WANT TO QUIT?";
+          event.returnValue = "ARE YOU SURE YOU WANT TO QUIT?";
+          unityInstance.SendMessage("BrowserCloser", "CloseObject");
 	  };
 	  	  	  	  	  
 	  function ExitSession(){
