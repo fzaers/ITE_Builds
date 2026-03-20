@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>ITE | ITE Litho Collaborative</title>
+    <title>ITE | Litho Collaborative</title>
     <meta name="description" content="">
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
@@ -22,7 +22,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <button id="entervr" value="Enter VR" disabled>VR MODE</button>
-        <div id="unity-build-title">ITE Litho Collaborative</div>
+        <div id="unity-build-title">Litho Collaborative</div>
       </div>
     </div>
     <script>
@@ -33,8 +33,8 @@
         frameworkUrl: buildUrl + "/Litho_Student.framework.js",
         codeUrl: buildUrl + "/Litho_Student.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "ITE Litho Collaborative",
+        companyName: "ITE",
+        productName: "Litho Collaborative",
         productVersion: "0.1",
       };
 
@@ -86,7 +86,8 @@
 	  //open confirmation menu when user attempt to close browser 
 	  
 	  window.onbeforeunload = function(event){
-		event.returnValue = "ARE YOU SURE YOU WANT TO QUIT?";
+          event.returnValue = "ARE YOU SURE YOU WANT TO QUIT?";
+          unityInstance.SendMessage("BrowserCloser", "CloseObject");
 	  };
 	  	  	  	  	  
 	  function ExitSession(){
